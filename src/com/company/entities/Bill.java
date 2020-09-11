@@ -1,19 +1,25 @@
 package com.company.entities;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Bill {
 
-    private ArrayList<Order> purchases;
+    private ArrayList<Order> order;
     private double price;
-
+/*
     public Bill(Order firstPurchase){
-        purchases = new ArrayList<>();
-        purchases.add(firstPurchase);
+        order = new ArrayList<>();
+        order.add(firstPurchase);
         this.price = firstPurchase.getPrice();
+    }
+*/
+
+    public Bill(ArrayList<Order> orders){
+        order = orders;
     }
 
     public void addPurchase(Order newOrder){
-        purchases.add(newOrder);
+        order.add(newOrder);
         this.price += newOrder.getPrice();
     }
 
