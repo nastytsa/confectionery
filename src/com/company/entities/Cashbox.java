@@ -1,10 +1,11 @@
 package com.company.entities;
 
 public class Cashbox {
+
     private double cash;
 
-    public Cashbox(double cash){
-        this.cash = cash;
+    public Cashbox(){
+        this.cash = 0.0;
     }
 
     public void addCash(double money){

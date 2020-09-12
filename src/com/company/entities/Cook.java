@@ -1,11 +1,13 @@
 package com.company.entities;
 
 public class Cook extends Human{
-    public Cook(String name, String surname){
+
+    public Cook(String name, String surname, Staff staff){
         super(name, surname);
+        staff.addCook();
     }
 
-    public void speak(){
-        System.out.println("- Hello, my name is " + name + surname + " and today I will show your some magic.\n");
+    public String speak(){
+        return "- Hello, my name is " + name + surname + " and today I will show your some magic.\n";
     }
 }

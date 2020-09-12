@@ -1,29 +1,21 @@
 package com.company.entities;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Bill {
 
     private ArrayList<Dessert> order;
+    private final MasterClass masterClass;
     private double price;
-/*
-    public Bill(Order firstPurchase){
-        order = new ArrayList<>();
-        order.add(firstPurchase);
-        this.price = firstPurchase.getPrice();
-    }
-*/
 
-    public Bill(ArrayList<Dessert> orders){
+    public Bill(ArrayList<Dessert> orders, MasterClass masterClass){
         order = orders;
+        this.masterClass = masterClass;
+        price = masterClass.getPrice();
+        for(int i = 0; i < getNumOrders(); i++)
+            price += order.get(i).getPrice();
     }
 
-    public void addPurchase(Dessert newOrder){
-        order.add(newOrder);
-        this.price += newOrder.getPrice();
-    }
-
-    public double getPrice(){
+    public double getOrderPrice(){
         return this.price;
     }
 
@@ -33,5 +25,9 @@ public class Bill {
 
     public dessertName getDessertName(int index){
         return order.get(index).getName();
+    }
+
+    public double getDessertPrice(int index){
+        return order.get(index).getPrice();
     }
 }

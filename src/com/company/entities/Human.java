@@ -1,6 +1,7 @@
 package com.company.entities;
 
 public class Human {
+
     protected String name;
     protected String surname;
 

@@ -3,12 +3,13 @@ import java.util.HashMap;
 
 public class Stock {
 
-    private HashMap<dessertName, Integer> stock = new HashMap<>();
+    private HashMap<dessertName, Integer> stock;
 
-    public Stock(int napoleonNum, int cheesecakeNum, int tiramisuNum){
-        stock.put(dessertName.NAPOLEON, napoleonNum);
-        stock.put(dessertName.CHEESECAKE, cheesecakeNum);
-        stock.put(dessertName.TIRAMISU, tiramisuNum);
+    public Stock(){
+        stock = new HashMap<>();
+        stock.put(dessertName.NAPOLEON, 0);
+        stock.put(dessertName.CHEESECAKE, 0);
+        stock.put(dessertName.TIRAMISU, 0);
     }
 
     public void addDessert(dessertName newDessert){
@@ -25,5 +26,15 @@ public class Stock {
 
     public boolean checkDessert(dessertName dessert){
         return stock.get(dessert) > 0;
+    }
+
+    public int numberOfDessert(dessertName dessert){
+        return stock.get(dessert);
+    }
+
+    public void cleanStock(){
+        stock.put(dessertName.NAPOLEON, 0);
+        stock.put(dessertName.CHEESECAKE, 0);
+        stock.put(dessertName.TIRAMISU, 0);
     }
 }
