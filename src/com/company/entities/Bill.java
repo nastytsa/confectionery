@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Bill {
 
-    private ArrayList<Order> order;
+    private ArrayList<Dessert> order;
     private double price;
 /*
     public Bill(Order firstPurchase){
@@ -14,16 +14,24 @@ public class Bill {
     }
 */
 
-    public Bill(ArrayList<Order> orders){
+    public Bill(ArrayList<Dessert> orders){
         order = orders;
     }
 
-    public void addPurchase(Order newOrder){
+    public void addPurchase(Dessert newOrder){
         order.add(newOrder);
         this.price += newOrder.getPrice();
     }
 
     public double getPrice(){
         return this.price;
+    }
+
+    public int getNumOrders(){
+        return order.size();
+    }
+
+    public dessertName getDessertName(int index){
+        return order.get(index).getName();
     }
 }

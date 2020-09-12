@@ -1,15 +1,20 @@
 package com.company.entities;
 
-public class Dessert extends Order{
+public class Dessert {
 
-    private final String name;
+    private final dessertName name;
+    private double price;
 
-    public Dessert(String name, double price) {
-        super(price);
+    public Dessert(dessertName name, double price) {
+        this.price = price;
         this.name = name;
     }
 
-    public String getName(){
+    public dessertName getName(){
         return this.name;
+    }
+
+    public double getPrice() {
+        return this.price;
     }
 }

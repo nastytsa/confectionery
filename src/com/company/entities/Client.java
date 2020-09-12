@@ -2,17 +2,23 @@ package com.company.entities;
 import java.util.ArrayList;
 
 public final class Client extends Human{
-    private ArrayList<Order> order;
-    public Client(String name, String surname) {
+    private ArrayList<Dessert> order;
+    private int masterClassDuration;
+    public Client(String name, String surname, int masterClassDur) {
         super(name, surname);
+        this.masterClassDuration = masterClassDur;
         this.order = new ArrayList<>();
     }
 
-    public void addOrder(Order newOrder){
+    public void addOrder(Dessert newOrder){
         order.add(newOrder);
     }
 
-    public ArrayList<Order> getOrder(){
+    public ArrayList<Dessert> getOrder(){
         return this.order;
+    }
+
+    public int getMasterClassDuration(){
+        return masterClassDuration;
     }
 }
