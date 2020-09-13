@@ -39,19 +39,19 @@ public class ReportService {
     public String createDailyReport(double income){
         Date date = new Date();
         StringBuilder report = new StringBuilder();
-        report.append("\n************************************************\nIncome for ")
+        report.append("\n**************************************************\nIncome for ")
                 .append(date.toString())
                 .append(" : \t").append(income)
-                .append("\n************************************************\n");
+                .append("\n**************************************************\n");
         return report.toString();
     }
 
     public String createMonthlyReport(){
         StringBuilder report = new StringBuilder();
         report.append("\n___________________________________________\nReport for " + month + " :\n")
-                .append("\nAmount of Napoleon made: ").append(napoleonQuantity)
-                .append("\nAmount of Cheesecakes made: ").append(cheesecakeQuantity)
-                .append("\nAmount of Tiramisu made: ").append(tiramisuQuantity)
+                .append("\nAmount of Napoleon sold: ").append(napoleonQuantity)
+                .append("\nAmount of Cheesecakes sold: ").append(cheesecakeQuantity)
+                .append("\nAmount of Tiramisu sold: ").append(tiramisuQuantity)
                 .append("\nTotal duration of master classes: ").append(masterClassDuration)
                 .append("\n\n___________________________________________\nTotal income: ").append(totalIncome)
                 .append("\n___________________________________________\n");

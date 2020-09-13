@@ -1,10 +1,13 @@
 package com.company.services;
-import com.company.entities.*;
+import com.company.entities.Bill;
+import com.company.entities.Stock;
+import com.company.entities.dessertName;
+import com.company.staff.Staff;
 
 public class FinancialService {
 
     private double income;
-    private Cashbox cashbox;
+    private final Cashbox cashbox;
 
     public FinancialService(){
         cashbox = new Cashbox();

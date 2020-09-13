@@ -1,6 +1,6 @@
-package com.company.entities;
+package com.company.staff;
 
-public class Salesman extends Human{
+public class Salesman extends Human {
 
     public Salesman(String name, String surname, Staff staff){
         super(name, surname);
@@ -8,7 +8,7 @@ public class Salesman extends Human{
     }
 
     public String greeting(){
-        return "- Welcome to our shop. My name is " + name + surname + ". Can I help you?\n";
+        return "- Welcome to our shop. My name is " + name + " " + surname + ". Can I help you?";
     }
 
     public String waiting(){

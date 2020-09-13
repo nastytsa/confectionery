@@ -1,4 +1,4 @@
-package com.company.entities;
+package com.company.services;
 
 public class Cashbox {
 

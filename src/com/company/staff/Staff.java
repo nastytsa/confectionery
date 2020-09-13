@@ -1,4 +1,4 @@
-package com.company.entities;
+package com.company.staff;
 
 public class Staff {
 

@@ -11,6 +11,11 @@ public class Dessert {
         stock.addDessert(this.name);
     }
 
+    public Dessert(dessertName name, double price){
+        this.name = name;
+        this.price = price;
+    }
+
     public dessertName getName(){
         return this.name;
     }
